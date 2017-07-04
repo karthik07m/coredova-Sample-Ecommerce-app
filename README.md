@@ -9,7 +9,7 @@ This app simple ecommerce app
 * Profile pic can be shared on socail media platforms like whatapp,fb,instagram and twitter.
 
 ## Design for Nexus-5
-*If you want to support  in other devices jst change styling in css files
+* If you want to support  in other devices jst change styling in css files
 
 # Issues:
 * Buletooth sharing not working.
