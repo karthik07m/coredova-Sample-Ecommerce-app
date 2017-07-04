@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <!--<link href="css/preloader.css" rel="stylesheet" />--> 
+    <link rel="stylesheet" type="text/css" href="css/wel.css">
+    <link href="css/imageSlider.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/preloader.css">
+</head>
+<body>
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+    
+          <section id="imageSlider">
+               <div class="slider" id="main-slider">
+                   <div class="slider-wrapper">       
+                       <div class="slide"><img src="images/posters/1.jpg" /></div>
+                       <div class="slide"><img src="images/posters/2.jpg"/></div>
+                       <div class="slide"><img src="images/posters/3.jpg" /></div>
+					    <div class="slide"><img src="images/posters/4.jpg" /></div>
+                   </div>
+               </div>	
+       </section>
+    <section id="secProducts" class="container">
+        <h4>Recently Viewed:</h4>
+  
+
+        <div id="CART_TEMPLATE" style="display:none">
+       
+            <figure>
+                <img id="sty" src="images/1.jpg" alt="img02" class="img-responsive" height="80" width="80" />
+                <figcaption>
+                    <p>Product Name:</p>
+                    <p class="productname"></p>
+                    <p class="price tot"></p>
+                    <p class="tot">$</p>
+                </figcaption>
+            </figure>
+        </div>
+
+    </section>
+    
+    <header>
+        <div class="container">
+            <h3>Welcome</h3>
+            <div id="mySidenav" class="sidenav">
+                   
+             <a  href="profile.html" id ="profile">
+               <img id="myImage" src="images/Profile/1.jpg" height="100" width="100" /> 
+               </a>
+                
+              
+                <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
+
+                <a href="About.html"><span class="glyphicon">&#xe086;</span>About Us</a>
+
+                <a href="products.html"><span class="glyphicon">&#xe135;</span>Products</a>
+
+                <a href="cart.html"><span class="glyphicon">&#xe116;</span>Cart<span class="badge" id="count2"></span></a>
+
+                <a href="contact.html"><span class="glyphicon">&#xe008;</span>Contact Us</a>
+            </div>
+            <span style="font-size:25px;cursor:pointer" id="openNav" class="glyphicon glyphicon-menu-hamburger"></span>
+               <a href="logout.html" class="logout">
+                    <span class="glyphicon glyphicon-log-out"></span>
+                    </a>
+   
+        </div>
+        </header>
+
+
+        <footer>
+            &copy;2017 All rights reserved
+        </footer>
+     
+
+      <script src="js/jquery-3.1.1.min.js"></script>
+      <script type="text/javascript" src="scripts/wel.js"></script>
+      <script src="scripts/preloader.js"></script>
+      <script type="text/javascript" src="scripts/logout.js"></script>
+      <script src="scripts/slider.js"></script>
+
+
+    <!--<script type="text/javascript" src="scripts/product.js"></script>-->
+    <!--<script src="js/jquery-1.10.2.js"></script>-->
+    <!--<script src="js/script.js"></script>-->
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+﻿body {
+    font-family: "Lato", sans-serif;
+}
+header {
+    position: fixed;
+    
+    top:0px;
+    bottom:90%;
+    width: 100%;
+    color: white;
+    background-color:darkcyan;
+}
+h3 {
+    text-align:center;
+}
+a {
+     position:fixed;
+    top:20px;
+    left:30px;
+}
+span {
+    color:deepskyblue;
+    font-size:23px;
+}
+span:hover {
+    color:dodgerblue;
+}
+
+.logout {
+    position:relative;
+    left:300px;
+    top :-35px;
+    color:deepskyblue;
+    font-size:20px;
+}
+
+.cont {
+    text-align:center;
+    color:dimgrey;
+    position:relative;
+    top:100px;
+}
+
+
+
+footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    color:white;
+    background-color:dimgray;
+    text-align: center;
+}

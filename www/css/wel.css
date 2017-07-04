@@ -1,0 +1,137 @@
+﻿body {
+    font-family: "Lato", sans-serif;
+    color:dimgray;
+}
+header {
+    position: fixed;
+    top: 0px;
+    bottom:90%;
+    width: 100%;
+    color: white;
+    background-color:darkcyan;
+
+}
+h3 {
+    text-align:center;
+}
+
+
+#openNav {
+    position:relative;
+    top:-37px; 
+    color:deepskyblue;
+   
+}
+.logout {
+    display:inline-block;
+    position:relative;
+    left:260px;
+    bottom:44px;
+    color:deepskyblue;
+    font-size:20px;
+}
+
+#sty {  
+    margin-left:5px;
+}
+
+#sty:hover
+{
+    opacity:0.80;
+}
+
+#myImage
+{
+  border-radius: 1px;
+  box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.3);
+}
+
+#getPosition {
+    display:inline-block;
+    position:relative;
+    top:100px;
+    left:75px;
+    
+}
+
+.sidenav {
+    height:100%;
+    width:0;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left:0px;
+    right:0px;
+    background-color:dimgray;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    opacity:0.98;
+    clear:both;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 42px;
+    text-decoration: none;
+    font-size: 18px;
+    color:lightseagreen;
+    display: block;
+    transition: 0.3s;
+}
+span {
+    padding-right:10px;
+}
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: -5px;
+    right: 3px;
+    font-size: 30px;
+    margin-left: 50px;
+}
+#profile{
+    position:relative;
+    top:-30px;
+    left:-10px;
+    
+}
+
+@media screen and (max-height: 400px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#secProducts
+{ 
+
+    /*background-color:black;*/
+    position:relative;
+    top:-140px;
+    
+    margin-bottom:0px;
+}
+figure {
+    float:left;
+    text-align:center;
+    padding-left:45px;
+}
+figcaption {
+  padding:2px;
+  line-height:9px;
+  font-size:13px
+}
+.tot {
+    display:inline;
+}
+
+
+footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    color:white;
+    background-color:dimgray;
+    text-align: center;
+}

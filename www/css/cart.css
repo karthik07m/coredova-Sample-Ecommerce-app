@@ -1,0 +1,98 @@
+﻿body {
+    font-family: "Lato", sans-serif;
+    color:dimgrey;
+}
+header {
+    position: fixed;
+    top: 0px;
+    bottom:90%;
+    width: 100%;
+    color: white;
+    background-color:darkcyan;
+    opacity:0.90;
+    clear:both;
+}
+h3 {
+    text-align:center;
+}
+a {
+    position:fixed;
+    top:20px;
+    left:30px;
+}
+span {
+    color:deepskyblue;
+    font-size:23px;
+}
+span:hover {
+    color:dodgerblue;
+}
+section {
+    margin-top:120px;
+
+}
+
+figure {
+    float:left;
+    text-align:center;
+    margin-left:5px;
+    margin-right:12px;
+   
+}
+figcaption {
+  padding:2px;
+  line-height:9px;
+  margin-bottom:23px;
+  font-size:13px
+}
+img 
+{
+    margin-left:5px;
+}
+img:hover {
+    opacity:0.80;
+}
+
+#btnViewCart {
+ 
+    position:relative;
+    left:245px;
+    bottom:40px;
+}
+#btnClearCart
+{
+ position:relative;
+    left:245px;
+    bottom:20px;
+}
+.cont {
+    text-align:center;
+    color:dimgrey;
+    position:relative;
+    top:100px;
+}
+
+.total {
+    
+    text-align:center;
+    font-family:'Lucida Console';
+    font-size:18px;
+    color:deepskyblue;
+}
+#total {
+    color:cadetblue;
+}
+.tot {
+    display:inline;
+}
+footer{
+   
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    color:white;
+    background-color:dimgray;
+    text-align: center;
+    clear:both;
+    opacity:0.90;
+}

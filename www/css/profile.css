@@ -1,0 +1,205 @@
+﻿body {
+    font-family: "Lato", sans-serif;
+}
+header {
+    position: fixed;
+    top:0px;
+    bottom:90%;
+    width: 100%;
+    color: white;
+    background-color:darkcyan;
+}
+h3 {
+    text-align:center;
+}
+a {
+    position:fixed;
+    top:20px;
+    left:30px;
+}
+span {
+    color:deepskyblue;
+    font-size:23px;
+}
+span:hover {
+    color:dodgerblue;
+}
+.logout {
+    position:relative;
+    left:300px;
+    top :-35px;
+    color:deepskyblue;
+    font-size:20px;
+}
+
+.info {
+    text-align:center;
+    font-family:'Microsoft MHei';
+    font-size:18px;
+    color:dimgrey;
+}
+.info1{
+    position:relative;
+    top:100px;
+}
+.info2 {
+    position:relative;
+    top:110px;
+}
+.info3 {
+    position:relative;
+    top:120px;
+}
+.info4 {
+    position:relative;
+    top:-50px;
+    left:50px;
+}
+.align
+{
+    display:inline;
+}
+#pass {
+    position:absolute;
+    top:380px;
+    left:120px;
+}
+/*#cameraTakePicture
+{
+    position:relative;
+    top:130px;
+    right:50px;
+
+}
+#cameraGetPicture
+{
+ position:relative;
+    top:130px;
+    right:0px;
+
+}*/
+
+
+.popup {
+    text-align:center;
+    position: relative;
+    top:140px;  
+    right:50px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.popup .popuptext {
+    visibility: hidden;
+    width: 260px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.popup2 {
+    text-align:center;
+    position: relative;
+    top:140px;  
+    right:50px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.popup2 .popuptext2 {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+
+.popup2 .popuptext2::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.popup2 .show2 {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+.move {  
+   position:relative;
+   left:140px;
+   top:250px;
+}
+.social_icon
+{
+    padding: 0px 8px 0px 8px;
+}
+
+
+footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    color:white;
+    background-color:dimgray;
+    text-align: center;
+}

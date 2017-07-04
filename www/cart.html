@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/cart.css">
+    <link href="css/preloader.css" rel="stylesheet" />
+</head>
+<body>
+    <p class="no "></p>
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+    <header>
+        <div class="container">
+            <h3>Cart Items</h3>
+            <form action="cart.html">
+                <button id="btnViewCart" class="btn btn-info "> Check Out </button>
+            </form>
+            <button id="btnClearCart" class="btn btn-info "> Clear Cart </button>
+            <a href="welcome.html"><span class="glyphicon">&#xe091;</span></a>
+        </div>
+    </header>
+
+    <section id="secProducts" class="container">
+    <div id="CART_TEMPLATE" style="display:none">
+        <figure>
+            <img src="images/1.jpg" alt="img02" class="img-responsive" height="80" width="80" />
+            <figcaption>
+                <p>Product Name:</p>
+                <p class="productname"></p>
+                <p class="price tot"></p>
+                <p class="tot">$</p>
+            </figcaption>
+        </figure>
+    </div>
+    </section>
+
+    <div class="total">
+        <p>Total Price:</p>
+        <p  class="tot" id="total"></p>
+        <p class="tot">$</p>
+    </div>
+   
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="scripts/preloader.js"></script>
+    <script type="text/javascript" src="scripts/cart.js"></script>
+</body>
+</html>

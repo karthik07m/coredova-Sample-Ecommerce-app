@@ -1,0 +1,104 @@
+﻿body {
+    font-family: "Lato", sans-serif;
+    color:dimgrey;
+}
+.display {
+    display:inline-block;
+}
+.dis {
+    display:block;
+}
+header {
+    position: fixed;
+    top: 0px;
+    bottom:90%;
+    width: 100%;
+    color: white;
+    background-color:darkcyan;
+    opacity:0.90;
+    clear:both;
+}
+h3 {
+    text-align:center;
+}
+a {
+    position:fixed;
+    top:20px;
+    left:30px;
+}
+span {
+    color:deepskyblue;
+    font-size:23px;
+}
+span:hover {
+    color:dodgerblue;
+}
+section {
+    margin-top:100px;
+    margin-bottom:30px;
+    
+}
+
+figure {
+    float:left;
+    margin-left:45px;
+  } 
+
+ img {
+ margin-left:5px;
+}
+
+
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;
+        margin:-90px 0px 0px -198px;
+    }
+}
+
+figcaption {
+  padding:2px;
+  line-height:9px;
+  margin-bottom:23px;
+  font-size:13px
+}
+
+img:hover {
+    opacity:0.80;
+}
+
+#btnViewCart {
+ 
+    position:relative;
+    left:260px;
+    bottom:45px; 
+}
+#cart 
+{
+    color:dimgrey;
+}
+#btnClearCart
+{
+    position:relative;
+    left:250px;
+    bottom:20px;
+}
+.cont {
+    text-align:center;
+    color:dimgrey;
+    position:relative;
+    top:100px;
+}
+
+
+footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    color:white;
+    background-color:dimgray;
+    text-align: center;
+    clear:both;
+    opacity:0.90;
+}

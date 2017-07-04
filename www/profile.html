@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="css/profile.css" rel="stylesheet" />
+    <link href="css/preloader.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="container">
+
+            <h3>Profile</h3>
+
+           <a href="logout.html" class="logout">
+                    <span class="glyphicon glyphicon-log-out"></span>
+                    </a>
+            <a href="welcome.html"><span class="glyphicon">&#xe091;</span></a>
+        </div>
+    </header>
+
+    <br class="Apple-interchange-newline">   <section class="container">
+        
+        <div id="preloader">
+            <div id="status">&nbsp;</div>
+        </div>
+
+        <div class="info">
+            <div class="popup" id="popup">
+            <img id="myImage" class="info4" src="images/Profile/1.jpg" height="150" width="150" />
+                <span class="popuptext" id="myPopup">
+                    <button id="cameraTakePicture" class="btn btn-info" style="display:inline; font-size:12px;">Capture</button>
+                    <button id="cameraGetPicture" class="btn btn-info" style="display:inline;font-size:12px;">Upload</button> 
+                    <button  class="btn btn-info" style="display:inline;font-size:12px;">Cancel</button>
+                </span>
+            </div>
+            
+           
+
+            <div class="info1">
+                    <p class="align">Your First name:</p>
+                    <p class="align" id="fname"></p>
+                </div>
+                <div class="info2">
+                    <p class="align">Your Last name:</p>
+                    <p class="align" id="lname"></p>
+                </div>
+                <div class="info3">
+                    <p class="align">UserID:</p>
+                    <p class="align" id="uid"></p>
+                   
+                </div>
+            </div>
+        <form action="reset.html">
+        <button type="submit"class="btn btn-info" id="pass">Password Reset</button>
+        </form>      
+    
+          <div class="popup2 move" id="popup2">
+   <p>Share<i class="fa fa-share-alt" aria-hidden="true"></i></p>
+    <span class="popuptext2 " id="myPopup2">
+        <script>
+           var s = 'www/images/Profile/1.jpg';
+            var t = localStorage.getItem('profile_image');
+        </script>
+    <span class="fa fa-instagram social_icon" onclick="window.plugins.socialsharing.shareViaInstagram('Message via Instagram', s)"></span>
+    <span class="fa fa-facebook social_icon" onclick="window.plugins.socialsharing.shareViaFacebook('Message via Facebook', t)"></span>
+    <span class="fa fa-whatsapp social_icon"onclick="window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', t)"></span>         
+    <span class="fa fa-twitter social_icon" onclick="window.plugins.socialsharing.shareViaTwitter('Message and link via Twitter',t)"></span>
+    <span class="fa fa-bluetooth" id="bluetooth"></span>
+    </span>
+                 
+         </div>
+
+</section>
+
+    <footer>
+        &copy;2017 All rights reserved 
+    </footer>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="scripts/preloader.js"></script>
+    <script src="scripts/profile.js"></script>
+
+    <!--<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+</body>
+</html>

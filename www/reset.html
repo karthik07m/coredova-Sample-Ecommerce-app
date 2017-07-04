@@ -1,0 +1,66 @@
+﻿a<!DOCTYPE html>
+<html>
+<head>
+    <title>Password</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link href="css/preloader.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+    <header>
+        <div class="container">
+
+            <h3>Password Reset</h3>
+
+
+            <a href="logout.html" class="logout">
+                <span class="glyphicon glyphicon-log-out"></span>
+            </a>
+            <a href="welcome.html"><span class="glyphicon">&#xe091;</span></a>
+        </div>
+    </header>
+   
+    <div class="container" id="data">
+
+        <div class="panel-body">
+            <form name="rSet">
+                <div class="form-group">
+                    <h2>New Password</h2>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Old Password</label>
+                    <input name="old_pas" type="password" maxlength="25" class="form-control" placeholder="Old Password" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">New Password</label>
+                    <input name="pas1" type="password" maxlength="25" class="form-control" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Confirm Password</label>
+                    <input name="pas2" type="password" maxlength="25" class="form-control" placeholder="Confirm password" required>
+                </div>
+                <div class="form-group">
+                    <button id="rSet" type="button" class="btn btn-info btn-block">Reset</button>
+                </div>
+                <hr>
+            </form>
+            
+        </div>
+    </div>
+             
+             <footer>
+               All rights reserved &copy;2017
+            </footer>
+
+    <script src="js/jquery-3.1.1.min.js"></script> 
+    <script src="scripts/preloader.js"></script>
+    <script src="scripts/reset.js"></script>
+    <script type="text/javascript" src="scripts/logout.js"></script>
+           
+</body>
+</html>
