@@ -12,4 +12,4 @@ This app simple ecommerce app
 * If you want to support  in other devices jst change styling in css files
 
 # Issues:
-* Buletooth sharing not working.
+* Bluetooth sharing not working.
