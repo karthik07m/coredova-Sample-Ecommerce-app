@@ -1,4 +1,4 @@
-# Coredova Sample Ecommerce App
+# Cordova Sample Ecommerce App
 This app simple ecommerce app  
 
 ## Consists functionalities:
