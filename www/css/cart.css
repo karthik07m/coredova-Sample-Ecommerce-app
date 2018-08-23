@@ -53,7 +53,7 @@ img:hover {
     opacity:0.80;
 }
 
-#btnViewCart {
+#btnCheckOut {
  
     position:relative;
     left:245px;
@@ -62,8 +62,9 @@ img:hover {
 #btnClearCart
 {
  position:relative;
-    left:245px;
-    bottom:20px;
+    left:150px;
+    top:15px;
+    
 }
 .cont {
     text-align:center;

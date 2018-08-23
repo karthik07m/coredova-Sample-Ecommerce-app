@@ -11,15 +11,13 @@
     document.getElementById("cameraGetPicture").addEventListener("click", cameraGetPicture);
     document.getElementById("popup").addEventListener("click", popup);
     document.getElementById("popup2").addEventListener("click", popup2);
-    document.getElementById("bluetooth").addEventListener("click" ,bluetooth);
+    //document.getElementById("bluetooth").addEventListener("click" ,bluetooth);
 
     if (localStorage.getItem('profile_image') != '') {
         var image = document.getElementById('myImage');
         image.src = localStorage.getItem('profile_image');
 
     }
-
-
 
 
     // Initialize a Cache 
@@ -35,10 +33,7 @@
 //    })
 
 })();
-function test()
-{
-   
-}
+
 
 function cameraTakePicture() {
         navigator.camera.getPicture(onSuccess, onFail, {
@@ -107,76 +102,113 @@ function popup2() {
     popup2.classList.toggle("show2");
 }
 
-function bluetooth() {
+//function bluetooth() {
+    
+//    bluetoothle.initialize(initializeSuccess, initializeError, "initialize");
+//    bluetoothle.enable(enableSuccess, enableError);
+//    bluetoothle.startScan(startScanSuccess, startScanError, true);
+//    //bluetoothle.bond(bondSuccess, bondError, true);
+//    bluetoothle.connect(connectSuccess, connectError, true);
+//    bluetoothle.write(writeSuccess, writeError, true);
+//}
 
-    bluetoothle.initialize(initializeSuccess, initializeError, true);
-    bluetoothle.enable(enableSuccess, enableError);
-    bluetoothle.startScan(startScanSuccess, startScanError, true);
-    bluetoothle.bond(bondSuccess, bondError, true);
-    bluetoothle.connect(connectSuccess, connectError, true);
-    bluetoothle.write(writeSuccess, writeError, true);
-}
+//function initializeSuccess(obj) {
+//    debugger;
+//    alert("Bluetooth is on");
+//    return obj;
+//}
 
-function initializeSuccess(obj) {
-    alert("Bluetooth is on");
-    return false;
-}
+//function initializeError(obj) {
+//    debugger;
+//    var err = JSON.stringify(obj);
+//    alert("Failure" + err);
+//    return false;
+//}
 
-function initializeError(obj) {
-    var err = JSON.stringify(obj);
-    alert("Failure" + err);
-    return false;
-}
+//function enableSuccess(obj)
+//{
+//    debugger;
+//    alert("Bluetooth is enabled");
+//    return obj;
+//}
 
-function enableSuccess(obj)
-{
-}
+//function enableError(obj)
+//{
+//    debugger;
+//    var err = JSON.stringify(obj);
+//    alert("Unable to on bluetooth :" + err);
+//    return false;
+//}
 
-function enableError(obj)
-{
-    var err = JSON.stringify(obj);
-    alert("Unable to on bluetooth :" + err);
-    return false;
-}
+//function startScanSuccess(result) {
 
-function startScanSuccess(obj)
-{
-    alert("Scan started sucessfully");
-    return false;
-}
-function startScanError(obj)
-{
-    var err = JSON.stringify(obj);
-    alert("Scan error :" + err);
-    return false;
-}
+//    alert("startScanSuccess(" + result.status + ")");
 
-function bondSuccess(obj)
-{
-    alert("Sucessfully bonded to device");
-    return false;
-}
-function bondError(obj)
-{
-    var err = JSON.stringify(obj);
-    alert("Bonding error" + err);
-    return false;
-}
+//    if (result.status === "scanStarted") {
 
-function connectSuccess(obj) {
-    alert("Sucessfully bonded to device");
-    return false;
-}
+//        alert("Scanning for devices (will continue to scan until you select a device)...", "status");
+//    }
+//    else if (result.status === "scanResult") {
 
-function connectError(obj) {
-    var err = JSON.stringify(obj);
-    alert("Connection fail" + err);
-    return false;
-}
+//        if (!foundDevices.some(function (device) {
 
-function writeSuccess(obj)
-{
-    var t = localStorage.getItem('profile_image');
-    return t;
-    alert("Sended successfull!");
-}
+//            return device.address === result.address;
+
+//        })) {
+
+//            alert('FOUND DEVICE:');
+//            alert(result);
+//            foundDevices.push(result);
+//            addDevice(result.name, result.address);
+//        }
+//    }
+//}
+//function startScanError(obj)
+//{
+//    debugger;
+//    var err = JSON.stringify(obj);
+//    alert("Scan error :" + err);
+//    return false;
+//}
+
+//function bondSuccess(obj)
+//{
+//    debugger;
+//    alert("Sucessfully bonded to device");
+//    return obj;
+//}
+//function bondError(obj)
+//{
+//    debugger;
+//    var err = JSON.stringify(obj);
+//    alert("Bonding error" + err);
+//    return false;
+//}
+
+//function connectSuccess(address) {
+   
+//    alert(address);
+//    return address;
+//}
+
+
+//function connectError(obj) {
+//    var err = JSON.stringify(obj);
+
+//    alert("Connection fail" + err);
+//    return false;
+//}
+
+//function writeSuccess(obj)
+//{
+//    var t = localStorage.getItem('profile_image');
+//    return t;
+//    alert("Sended successfull!");
+//}
+
+//function writeError(obj)
+//{
+//    var err = JSON.stringify(obj);
+//    alert("Send Error" + err);
+//    return false;
+//}

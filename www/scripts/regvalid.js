@@ -1,4 +1,4 @@
-﻿(function () {
+﻿ (function () {
 
     document.getElementById("up").addEventListener("click", check);
    

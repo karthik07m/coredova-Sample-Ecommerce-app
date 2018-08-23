@@ -9,12 +9,23 @@ header {
     width: 100%;
     color: white;
     background-color:darkcyan;
+    clear:both;
 }
+
+ #map-canvas {
+        margin:0px;
+        padding:0px;
+        width:100%;
+        position:relative;
+        top:100px;    
+        height:250px;
+ }
+
 h3 {
     text-align:center;
 }
+
 a {
-  
      position:fixed;
     top:20px;
     left:30px;
@@ -26,16 +37,21 @@ span {
 span:hover {
     color:dodgerblue;
 }
+
 .logout {
     position:relative;
     left:300px;
-top :-35px;
+    top :-35px;
     color:deepskyblue;
     font-size:20px;
 }
-#data {
+
+.cont {
+    text-align:center;
+    color:dimgrey;
     position:relative;
-    top:50px;
+    top:60px;
+  
 }
 
 

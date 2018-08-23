@@ -16,9 +16,10 @@ h3 {
 }
 
 
+
 #openNav {
-    position:relative;
-    top:-37px; 
+    position:relative !important;
+    top:-37px !important; 
     color:deepskyblue;
    
 }
@@ -64,7 +65,7 @@ h3 {
     right:0px;
     background-color:dimgray;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.2s;
     padding-top: 60px;
     opacity:0.98;
     clear:both;
@@ -81,6 +82,7 @@ h3 {
 span {
     padding-right:10px;
 }
+
 .sidenav a:hover, .offcanvas a:focus{
     color: #f1f1f1;
 }

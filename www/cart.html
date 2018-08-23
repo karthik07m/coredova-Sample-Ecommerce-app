@@ -1,9 +1,14 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <title>Cart</title>
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+   
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/cart.css">
     <link href="css/preloader.css" rel="stylesheet" />
 </head>
@@ -16,10 +21,11 @@
     <header>
         <div class="container">
             <h3>Cart Items</h3>
-            <form action="cart.html">
-                <button id="btnViewCart" class="btn btn-info "> Check Out </button>
-            </form>
-            <button id="btnClearCart" class="btn btn-info "> Clear Cart </button>
+            <!--<form action="payment.html">-->
+            
+                <button id="btnCheckOut" type="button" class="btn btn-info  "> Check Out </button>
+            <!--</form>-->
+            <button id="btnClearCart" class="btn btn-info " > Clear Cart </button>
             <a href="welcome.html"><span class="glyphicon">&#xe091;</span></a>
         </div>
     </header>
@@ -32,7 +38,7 @@
                 <p>Product Name:</p>
                 <p class="productname"></p>
                 <p class="price tot"></p>
-                <p class="tot">$</p>
+                <p class="tot"></p>
             </figcaption>
         </figure>
     </div>
@@ -41,9 +47,10 @@
     <div class="total">
         <p>Total Price:</p>
         <p  class="tot" id="total"></p>
-        <p class="tot">$</p>
+        <p class="tot fa fa-inr"></p>
     </div>
-   
+
+    <script type="text/javascript" src="cordova.js"></script>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="scripts/preloader.js"></script>
     <script type="text/javascript" src="scripts/cart.js"></script>

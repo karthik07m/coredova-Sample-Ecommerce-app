@@ -34,9 +34,22 @@ span:hover {
     color:dodgerblue;
 }
 section {
-    margin-top:100px;
+    margin-top:120px;
     margin-bottom:30px;
-    
+}
+
+
+
+.selection {
+    position:absolute;
+    top:75px;
+    left:20px;
+}
+
+.brand {
+    position:relative;
+    left:245px;
+    top:-45px;
 }
 
 figure {
@@ -83,6 +96,21 @@ img:hover {
     position:relative;
     left:250px;
     bottom:20px;
+}
+
+#brandSort
+{
+    position:relative;
+    left:80px;
+    top:-30px;
+}
+
+#priceSort
+{ 
+    transition:2s;
+    position:relative;
+    left:80px;
+    top:-30px;
 }
 .cont {
     text-align:center;

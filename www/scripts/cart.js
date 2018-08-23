@@ -1,11 +1,19 @@
-﻿(function () {
+﻿var paisa = 0;
+(function () {
+
+    document.getElementById('btnCheckOut').addEventListener('click', function (event) {
+        RazorpayCheckout.open(rzpOptions, successCallback, cancelCallback);
+        event.preventDefault();
+    })
+
+
     $("#btnClearCart").click(ClearCart_Click);
     totalPrice();
     var cart = new Array();
     var str = localStorage["cart"];
     if (str == "") {
         alert("cart is empty");
-        return;
+       
     }
     cart = JSON.parse(localStorage["cart"]);
     
@@ -26,6 +34,9 @@
     }
   ;
 })();
+
+
+
 
 function ClearCart_Click() {
     var cart = new Array();
@@ -49,4 +60,37 @@ function totalPrice() {
    }
     //alert("Total Price:" + total);
     $("#total").text(total);
+    paisa = total * 100;
 }
+
+var rzpOptions = {
+    key: "rzp_test_1DP5mmOlF5G5ag",
+    currency: 'INR',
+    amount: paisa, 
+    name: "Karthik",
+    description: "Purchase Description",
+    image: "images/icon.jpg",
+    handler: function (response) {
+        alert(response.razorpay_payment_id);
+    },
+    prefill: {
+        name: "karthik ",
+        email: "Karthik07m@gmail.com"
+    },
+    notes: {
+        address: "Dehradun"
+    },
+    theme: {
+        color: "darkcyan"
+    }
+};
+
+var successCallback = function (payment_id) {
+    alert('payment_id: ' + payment_id)
+};
+
+var cancelCallback = function (error) {
+    alert(error.description + ' (Error ' + error.code + ')')
+};
+
+

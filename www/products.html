@@ -1,11 +1,17 @@
-﻿<!DOCTYPE html>
+﻿
+
+<!DOCTYPE html>
 <html>
 <head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <title>Products</title>
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/product.css">
     <link href="css/preloader.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
 </head>
 <body>
     <div id="preloader">
@@ -22,101 +28,99 @@
             <a href="welcome.html"><span class="glyphicon">&#xe091;</span></a>
         </div>
     </header>
+
+     
+    
     <section id="secProducts" class="container">
-        <!--<div id="cart1">
-                <figure >
-                    <img src="images/1.jpg" alt="img02"   class="img-responsive" height="80" width="80"/>
+       
+         <select id="sortByPrice" class="btn btn-info selection">
+            <option>Sort by price</option>
+            <option value="l2h">Low to High</option>
+            <option value="h2l">High to Low</option>
+        </select>
+        
+        <!--<select id="sortByBrand" class="btn btn-info brand ">
+            <option>Sort by brand</option>
+            <option value="lg">LG</option>
+            <option value="moto">Moto</option>
+            <option value="iphone">iPhone</option>
+            <option value="Sam">Samsung</option>
+            <option value="One">OnePlus</option>
+        </select>-->
+        <button type="button"  class="btn btn-info  brand" data-toggle="modal" data-target="#myModal">Fliter<i class="fa fa-filter" aria-hidden="true"></i></button>
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button"  class="close " data-dismiss="modal" style="color:red">&times;</button>
+                        <h4 class="modal-title">Selection</h4>
+                    </div>
+                    <div class="modal-body" >
+                        <!--<select id="sortByBrand" class="btn btn-info">
+                            <option>Brand</option>
+                            <option value="lg">LG</option>
+                            <option value="moto">Moto</option>
+                            <option value="iphone">iPhone</option>
+                            <option value="Sam">Samsung</option>
+                            <option value="One">OnePlus</option>
+                        </select>-->     
+                <button type="button" class="btn btn-info" id="brand">Brand</button>
+                 <div id="brandSort" style="display:none">
+                 <input type="checkbox" id="lg" />LG<br />
+                 <input type="checkbox" id="moto" />Moto<br />
+                 <input type="checkbox" id="iphone" />iPhone<br />
+                 <input type="checkbox" id="onePlus" />OnePlus<br />  
+                 <input type="checkbox" id="samsung" />Samsung<br />
+
+                        </div>
+                        <hr />
+                   <button type="button" class="btn btn-info" id="range">Price<i class="fa fa-inr"></i></button>
+                   <div id="priceSort" style="display:none">
+                        <input type="checkbox" id="range1" />10000-20000<br/>
+                        <input type="checkbox" id="range2" />20000-30000<br />
+                        <input type="checkbox" id="range3" />30000-40000<br />
+                    </div>
+                    </div>
+                    <div class="modal-footer">
+                       
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success" id="apply">Apply</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="remover">
+            <div id="PRODUCT_TEMPLATE" style="display:none">
+                <figure>
+
+                    <div class="img-wrap">
+                    <img src="images/1.jpg" alt="img02" class="img-responsive" height="80" width="80" />
+                    </div>
+
                     <figcaption>
                         <p>Product Name:</p>
-                        <p>Mobile1</p>
-                        <p>Price:120$</p>
-                        <button class="btn btn-info" id="c1" >Add to cart</button>
+                        <p class="productname"></p>
+                        <p class="display">Price:</p>
+                        <p class="price display"> </p>
+                        <p class="display"><i class="fa fa-inr"></i></p>
+                        <a href=""></a>
+                        <input type="button" class="btn btn-info dis" name="AddToCart" data-productid="0" value="Add to cart" />
                     </figcaption>
                 </figure>
-
             </div>
-
-
-            <div>
-                <figure>
-                    <img src="images/1.jpg" alt="img02" class="img-responsive" height="80" width="80"/>
-                    <figcaption>
-                        <p>Product Name:</p>
-                        <p>Mobile2</p>
-                        <p>Price:120$</p>
-                        <button class="btn btn-info" name="AddToCart" data-productid="2">Add to cart</button>
-                  </figcaption>
-                </figure>
-                </div>
-        <div>
-            <figure>
-                <img src="images/1.jpg" alt="img02" class="img-responsive" height="80" width="80" />
-                <figcaption>
-                    <p>Product Name:</p>
-                    <p>Mobile3</p>
-                    <p>Price:120$</p>
-                    <button class="btn btn-info" name="AddToCart" data-productid="3">Add to cart</button>
-                </figcaption>
-            </figure>
         </div>
-        <div>
-            <figure>
-                <img src="images/1.jpg" alt="img02" class="img-responsive" height="80" width="80" />
-                <figcaption>
-                    <p>Product Name:</p>
-                    <p>Mobile4</p>
-                    <p>Price:120$</p>
-                    <button class="btn btn-info" name="AddToCart" data-productid="4">Add to cart</button>
-                </figcaption>
-            </figure>
-        </div>
-
-        <div>
-            <figure>
-                <img src="images/1.jpg" alt="img02" class="img-responsive" height="80" width="80" />
-                <figcaption>
-                    <p>Product Name:</p>
-                    <p>Mobile5</p>
-                    <p>Price:120$</p>
-                    <button class="btn btn-info" name="AddToCart" data-productid="5">Add to cart</button>
-                </figcaption>
-            </figure>
-        </div>
-
-        <div>
-            <figure>
-                <img src="images/1.jpg" alt="img02" class="img-responsive" height="80" width="80" />
-                <figcaption>
-                    <p>Product Name:</p>
-                    <p>Mobile6</p>
-                    <p>Price:120$</p>
-                    <input type="button" class="btn btn-info" name="AddToCart" data-productid="6" value="Add to cart"/>
-                </figcaption>
-            </figure>
-        </div>-->
     </section>
-
-    <div id="PRODUCT_TEMPLATE" style="display:none">
-        <figure>
-            <div class="img-wrap">
-                <img src="images/1.jpg" alt="img02" class="img-responsive" height="80" width="80" />
-            </div>
-                <figcaption>
-                <p>Product Name:</p>
-                <p class="productname"></p>
-                <p class="display">Price:</p>
-                <p class="price display"> </p>
-                <p class="display">$</p>
-                <input type="button" class="btn btn-info dis" name="AddToCart" data-productid="0" value="Add to cart" />
-            </figcaption>
-        </figure>
-    </div>
     <footer>
-        All rights reserved &copy;2017
+        &copy;Ecommerce
     </footer>
     <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script src="scripts/preloader.js"></script>
     <script type="text/javascript" src="scripts/products.js"></script>
     <script src="scripts/count.js"></script>
+   
 </body>
 </html>
