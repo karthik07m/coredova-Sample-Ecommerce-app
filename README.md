@@ -13,3 +13,4 @@ This app simple ecommerce app
 
 # Issues:
 * Bluetooth sharing not working.
+# http://camposha.info/source/android-sqlite-recyclerview-source
