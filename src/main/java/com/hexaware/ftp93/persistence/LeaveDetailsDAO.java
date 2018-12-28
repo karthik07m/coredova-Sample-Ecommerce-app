@@ -117,9 +117,21 @@ public interface LeaveDetailsDAO  {
   @SqlUpdate("UPDATE LEAVE_DETAILS SET LVD_LEAVE_STATUS = 'APPROVED' WHERE EMP_ID = :empId")
   void updateCEO(@Bind("empId") int empId);
 
+  /**
+   * return Manager the details of the Leave Id.
+   * @param leaveID the id of the employee
+   * @return the ManagerID value
+   */
+  @SqlQuery("SELECT E1.EMP_ID FROM EMPLOYEE E1 "
+      + " JOIN EMPLOYEE E2 ON E1.Emp_ID = E2.EMP_MANAGER_ID WHERE E2.EMP_ID =(SELECT EMP_ID FROM LEAVE_DETAILS "
+      + " WHERE LVD_ID=:leaveID)")
+  int getManager(@Bind("leaveID") int leaveID);
+
+
     /**
     * close with no args is used to close the connection.
     */
   void close();
 
 }
+

@@ -30,3 +30,4 @@ public class LeaveDetailsMapper implements ResultSetMapper<LeaveDetails> {
         rs.getString("LVD_MANAGER_COMMENTS"));
   }
 }
+

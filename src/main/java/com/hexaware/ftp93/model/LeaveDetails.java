@@ -250,20 +250,25 @@ public class LeaveDetails {
 
   /**
    * Method for Approve or Deny the Leave.
+   * @param mgrId       to enter mgrId to approve/deny.
    * @param leaveId     to enter LeaveId to approve/deny.
    * @param status      to enter status to approve/deny.
    * @param mgrComments to get manager comments.
    * @return String.
    */
-  public static String managerAction(final int leaveId, final String status, final String mgrComments) {
+  public static String managerAction(final int mgrId, final int leaveId, final String status,
+       final String mgrComments) {
     int noOfDays = getLvdNoOfDays();
     LeaveDetails ld = dao().findLeave(leaveId);
+    int getMgrId = dao().getManager(leaveId);
     int empID = ld.getEmpId();
     Employee employee = edao().find(empID);
     String dbstatus = null;
     String result = "";
     String status1 = status.toLowerCase();
-    if (status1.equals("approved")) {
+    if (mgrId != getMgrId) {
+      result = "You are not authorized!!";
+    } else if (status1.equals("approved")) {
       dbstatus = "APPROVED";
       dao().mgrcommnets(mgrComments, dbstatus, leaveId);
       result = "Approved Successfully";
@@ -408,7 +413,7 @@ public class LeaveDetails {
     } else {
       dao().insert(empid, leavedays, startDate, endDate, leaveType, leaveReason, sf.format(today));
       msg = "**** Your leave request succcessfully recored " + "form :" + startDate + " - " + endDate + " for: "
-          + leavedays + "days" + " ****";
+          + leavedays  + "days" + " ****";
       if (mgrId == 0) {
         dao().updateCEO(empid);
         //edao().updateBal(empid, availableBalEL);

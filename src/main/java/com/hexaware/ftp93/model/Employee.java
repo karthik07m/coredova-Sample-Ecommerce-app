@@ -52,31 +52,30 @@ public class Employee {
 
   @Override
   public final int hashCode() {
-    return Objects.hash(empId, empName, empEmail, empMobileNo, empDoj, empDept, empLeaveBalanceEL, empLeaveBalanceSL,
-        empLeaveBalanceML, empManagerId);
+    return Objects.hash(empId, empName, empEmail, empMobileNo, empDoj, empDept, empLeaveBalanceEL,
+    empLeaveBalanceML, empLeaveBalanceSL, empManagerId);
   }
-
   /**
-   * @param argEmpId to initialize employee id.
-   */
+  * @param argEmpId to initialize employee id.
+  */
   public Employee(final int argEmpId) {
     this.empId = argEmpId;
   }
   /**
-   * @param argEmpId             to initialize employee id.
-   * @param argEmpDept           to initialize employee department
-   * @param argEmpLeaveBalanceEL to initialize employee leave balance
-   * @param argEmpLeaveBalanceSL to initialize employee leave balance
-   * @param argEmpLeaveBalanceML to initialize employee leave balance
-   * @param argManagerId         to initialize employee manager
-   * @param argEmpName           to initialize employee name
-   * @param argEmpEmail          to initialize employee email
-   * @param argMobileNo          to initialize employee mobile number
-   * @param argEmpDoj            to initialize employee id.
-   */
-  public Employee(final int argEmpId, final String argEmpName, final String argEmpEmail,
-      final long argMobileNo, final Date argEmpDoj, final String argEmpDept, final int argEmpLeaveBalanceEL,
-      final int argEmpLeaveBalanceSL, final int argEmpLeaveBalanceML, final int argManagerId) {
+  * @param argEmpId to initialize employee id.
+  * @param argEmpDept to initialize employee department
+  * @param argEmpLeaveBalanceEL to initialize employee leave balance
+  * @param argEmpLeaveBalanceML to initialize employee leave balance
+  * @param argEmpLeaveBalanceSL to initialize employee leave balance
+  * @param argManagerId to initialize employee manager
+  * @param argEmpName to initialize employee name
+  * @param argEmpEmail to initialize employee email
+  * @param argMobileNo to initialize employee mobile number
+  * @param argEmpDoj to initialize employee id.
+  */
+  public Employee(final int argEmpId, final String argEmpName, final String argEmpEmail, final long argMobileNo,
+                  final Date argEmpDoj, final String argEmpDept, final int argEmpLeaveBalanceEL,
+                  final int argEmpLeaveBalanceML, final int argEmpLeaveBalanceSL, final int argManagerId) {
     this.empId = argEmpId;
     this.empName = argEmpName;
     this.empEmail = argEmpEmail;
@@ -84,8 +83,8 @@ public class Employee {
     this.empDoj = argEmpDoj;
     this.empDept = argEmpDept;
     this.empLeaveBalanceEL = argEmpLeaveBalanceEL;
-    this.empLeaveBalanceSL = argEmpLeaveBalanceSL;
     this.empLeaveBalanceML = argEmpLeaveBalanceML;
+    this.empLeaveBalanceSL = argEmpLeaveBalanceSL;
     this.empManagerId = argManagerId;
   }
   /**
@@ -175,7 +174,7 @@ public class Employee {
   }
   /**
    * Gets the EmployeeLeaveBalanceEL.
-   * @return this Employee's leave balanceEL.
+   * @return this Employee's levae balance.
    */
   public final int getEmpLeaveBalanceEL() {
     return empLeaveBalanceEL;
@@ -188,22 +187,8 @@ public class Employee {
     this.empLeaveBalanceEL = argEmpLeaveBalanceEL;
   }
   /**
-   * Gets the EmployeeLeaveBalance.
-   * @return this Employee's leave balanceSL.
-   */
-  public final int getEmpLeaveBalanceSL() {
-    return empLeaveBalanceSL;
-  }
-  /**
-   *
-   * @param argEmpLeaveBalanceSL to set employee id.
-   */
-  public final void setEmpLeaveBalanceSL(final int argEmpLeaveBalanceSL) {
-    this.empLeaveBalanceSL = argEmpLeaveBalanceSL;
-  }
-  /**
    * Gets the EmployeeLeaveBalanceML.
-   * @return this Employee's leave balanceML.
+   * @return this Employee's levae balance.
    */
   public final int getEmpLeaveBalanceML() {
     return empLeaveBalanceML;
@@ -214,6 +199,21 @@ public class Employee {
    */
   public final void setEmpLeaveBalanceML(final int argEmpLeaveBalanceML) {
     this.empLeaveBalanceML = argEmpLeaveBalanceML;
+  }
+
+   /**
+   * Gets the EmployeeLeaveBalanceSL.
+   * @return this Employee's levae balance.
+   */
+  public final int getEmpLeaveBalanceSL() {
+    return empLeaveBalanceSL;
+  }
+  /**
+   *
+   * @param argEmpLeaveBalanceSL to set employee id.
+   */
+  public final void setEmpLeaveBalanceSL(final int argEmpLeaveBalanceSL) {
+    this.empLeaveBalanceSL = argEmpLeaveBalanceSL;
   }
   /**
    * Gets the EmployeeManagerId.
@@ -259,8 +259,7 @@ public class Employee {
   public final String toString() {
     return "empId" + empId + "empName" + empName + "empMail" + empEmail + "empMobileNo" + empMobileNo + "empDoj"
            + empDoj + "empdept" + empDept + "empleavebalanceEL" + empLeaveBalanceEL + "empleavebalanceSL"
-        + empLeaveBalanceSL + "empleavebalanceML" + empLeaveBalanceML + "empmgrid" + empManagerId;
-
+           + empLeaveBalanceSL + "empleavebalanceML" + empLeaveBalanceML + "empmgrid" + empManagerId;
   }
 }
 

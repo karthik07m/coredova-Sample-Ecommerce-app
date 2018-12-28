@@ -32,7 +32,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 /**
- * Test class for Employee.
+* Test class for Employee.
  */
 public class LeaveDetailsTest {
 
@@ -43,11 +43,11 @@ public class LeaveDetailsTest {
   @Test
   public final void testLeaveDetailsGetter() throws ParseException {
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-    Date date1 = (Date) sdf.parse("2018-11-13");
-    Date date2 = (Date) sdf.parse("2018-11-15");
-    Date date3 = (Date) sdf.parse("2018-11-10");
+    Date date1 = sdf.parse("2018-11-13");
+    Date date2 = sdf.parse("2018-11-15");
+    Date date3 = sdf.parse("2018-11-10");
     LeaveDetails ld = new LeaveDetails(3000, 1230, 3, date1, date2, LeaveType.EL, LeaveStatus.APPROVED, "fever", date3,
-        "Always taking leaves");
+         "Always taking leaves");
     assertEquals(1230, ld.getLvdId());
     assertEquals(3000, ld.getEmpId());
     assertEquals(sdf.parse("2018-11-13"), ld.getLvdStartDate());
@@ -67,9 +67,9 @@ public class LeaveDetailsTest {
   @Test
   public final void testLeaveDetailsSetters() throws ParseException {
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-    Date date1 = sdf.parse("2018-11-13");
-    Date date2 = sdf.parse("2018-11-15");
-    Date date3 = sdf.parse("2018-11-10");
+    Date date1 = (Date) sdf.parse("2018-11-13");
+    Date date2 = (Date) sdf.parse("2018-11-15");
+    Date date3 = (Date) sdf.parse("2018-11-10");
     LeaveDetails ld = new LeaveDetails(3000, 1230, 3, date1, date2, LeaveType.EL, LeaveStatus.APPROVED, "fever", date3,
         "Always taking leaves");
     ld.setLvdId(1230);
@@ -217,7 +217,7 @@ public class LeaveDetailsTest {
     new Expectations()
     {
       {
-        dao.insert(3001, 2, "2018-12-26", "2018-12-27", "EL", "function", "2018-12-10");
+        dao.insert(3001, 2, "2018-12-29", "2018-12-30", "SL", "function", "2018-12-28");
       }
     };
     new MockUp<LeaveDetails>()
@@ -234,7 +234,7 @@ public class LeaveDetailsTest {
     };
     new Expectations() {
       {
-        dao.count(3001, "2018-12-26", "2018-12-27");
+        dao.count(3001, "2018-12-29", "2018-12-30");
       }
     };
     // new Expectations() {
@@ -250,17 +250,17 @@ public class LeaveDetailsTest {
     //   }
     // };
 
-    String act = LeaveDetails.applyProcess(3001, "2018-12-26", "2018-12-27", "EL", "function");
-    String exp =  "**** Your leave request succcessfully recored " + "form :" + "2018-12-19"
-                + " - " + "2018-12-20" + " for: " + 1 + "days" + " ****";
+    String act = LeaveDetails.applyProcess(3001, "2018-12-29", "2018-12-30", "SL", "function");
+    String exp =  "**** Your leave request succcessfully recored " + "form :" + "2018-12-29"
+                + " - " + "2018-12-30" + " for: " + 2 + "days" + " ****";
     assertEquals(exp, act);
-    // String actual = LeaveDetails.applyProcess(2000, "2018-12-22", "2018-12-23", "ML", "function");
-    // String expec =  "**** Your leave request succcessfully recored " + "form :" + "2018-12-22"
-    //             + " - " + "2018-12-23" + " for: " + 2 + "days" + " ****";
-    // assertEquals(expec, actual);
-    // int ac = LeaveDetails.countNo(3001, "2018-12-19", "2018-12-20");
-    // int ex = 0;
-    // assertEquals(ex, ac);
+    String actual = LeaveDetails.applyProcess(2000, "2018-12-31", "2019-01-01", "ML", "function");
+    String expec =  "**** Your leave request succcessfully recored " + "form :" + "2018-12-31"
+                + " - " + "2019-01-01" + " for: " + 2 + "days" + " ****";
+    assertEquals(expec, actual);
+    int ac = LeaveDetails.countNo(3001, "2018-12-28", "2018-12-29");
+    int ex = 0;
+    assertEquals(ex, ac);
     /*String ac = edao.updateBal(3001, 3);
     String ex = "**** Your leave request succcessfully recored " + "form :" + "2018-12-22"
                 + " - " + "2018-12-23" + " for: " + 2 + "days" + " ****";
@@ -297,11 +297,17 @@ public class LeaveDetailsTest {
         return dao;
         }
     };
-    String act = LeaveDetails.managerAction(100, "APPROVED", "approve");
+    String act = LeaveDetails.managerAction(2000, 1, "APPROVED", "approve");
     String exc = "Approved Successfully";
     assertEquals(exc, act);
-    String act1 = LeaveDetails.managerAction(100, "DENIED", "approve");
-    String exc1 = "Denied Permission";
-    assertEquals(exc1, act1);
+    // String act1 = LeaveDetails.managerAction(2000, 1, "DENIED", "approve");
+    // String exc1 = "Denied Permission";
+    // assertEquals(exc1, act1);
+    // String act2 = LeaveDetails.managerAction(3000, 5, "DENIED", "approve");
+    // String exc2 = "You are not authorized!!";
+    // assertEquals(exc2, act2);
+    // String act3 = LeaveDetails.managerAction(2000, 1, "APPROVED", "approve");
+    // String exc3 = "**** You have already aprroved ****";
+    // assertEquals(exc3, act3);
   }
 }

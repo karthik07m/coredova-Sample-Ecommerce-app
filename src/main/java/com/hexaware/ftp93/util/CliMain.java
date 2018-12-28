@@ -79,21 +79,36 @@ public class CliMain {
   }
   private void managerAction() {
     int leaveId = 0;
-    while (true) {
-      try {
-        System.out.println("*****Enter leave id:*****");
-        String id = option.next();
-        leaveId = Integer.parseInt(id);
-        LeaveDetails l = LeaveDetails.listById(leaveId);
-        int a = l.getLvdId();
-        if (a == leaveId) {
-          break;
+    int empid = 0;
+    try {
+      System.out.println("**** Enter Employee(Manager) id: ****");
+      String employeeId = option.next();
+      empid = Integer.parseInt(employeeId);
+      Employee employee = Employee.listById(empid);
+      if (employee == null) {
+        System.out.println("**** Invalid employee id!!! ****");
+      } else {
+        while (true) {
+          try {
+            System.out.println("*****Enter leave id:*****");
+            String id = option.next();
+            leaveId = Integer.parseInt(id);
+            LeaveDetails l = LeaveDetails.listById(leaveId);
+            int a = l.getLvdId();
+            if (a == leaveId) {
+              break;
+            }
+          } catch (InputMismatchException e) {
+            System.out.println("*****Enter valid LeaveId*****");
+          } catch (Exception e) {
+            System.out.println("*****Enter valid LeaveId*****");
+          }
         }
-      } catch (InputMismatchException e) {
-        System.out.println("*****Enter valid LeaveId*****");
-      } catch (Exception e) {
-        System.out.println("*****Enter valid LeaveId*****");
       }
+    } catch (InputMismatchException e) {
+      System.out.println("**** Enter valid ManagerId **** ");
+    } catch (Exception e) {
+      System.out.println("**** Enter valid manager Id ****");
     }
     LeaveDetails lvdId = LeaveDetails.listById(leaveId);
     if (lvdId == null) {
@@ -103,7 +118,7 @@ public class CliMain {
       String status = option.next();
       System.out.println("*****Manager Comments:*****");
       String mgrcomm = option.next();
-      String result = LeaveDetails.managerAction(leaveId, status, mgrcomm);
+      String result = LeaveDetails.managerAction(empid, leaveId, status, mgrcomm);
       System.out.println(result);
     }
   }

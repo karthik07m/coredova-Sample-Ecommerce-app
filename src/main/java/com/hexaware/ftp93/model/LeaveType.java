@@ -7,5 +7,6 @@ public enum LeaveType {
     /**
      * EL is earned leave.
      */
-    EL, SL, ML
+    EL, ML, SL
 }
+
