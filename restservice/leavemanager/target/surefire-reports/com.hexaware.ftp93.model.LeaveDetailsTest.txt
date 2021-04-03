@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.hexaware.ftp93.model.LeaveDetailsTest
--------------------------------------------------------------------------------
-Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.612 s <<< FAILURE! - in com.hexaware.ftp93.model.LeaveDetailsTest
-testapplyProcess(com.hexaware.ftp93.model.LeaveDetailsTest)  Time elapsed: 0.643 s  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<****[ Your leave request succcessfully recored form :2018-12-19 - 2018-12-20 for: 1days ]****> but was:<****[*Insufficient Leave Balance(EL/SL/ML) *]****>
-	at com.hexaware.ftp93.model.LeaveDetailsTest.testapplyProcess(LeaveDetailsTest.java:256)
-
